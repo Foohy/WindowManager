@@ -102,7 +102,7 @@
             this.listWindows.Location = new System.Drawing.Point(0, 0);
             this.listWindows.MultiSelect = false;
             this.listWindows.Name = "listWindows";
-            this.listWindows.Size = new System.Drawing.Size(193, 235);
+            this.listWindows.Size = new System.Drawing.Size(193, 218);
             this.listWindows.SmallImageList = this.iconList;
             this.listWindows.TabIndex = 0;
             this.listWindows.UseCompatibleStateImageBehavior = false;
@@ -193,7 +193,7 @@
             this.groupBox1.Controls.Add(this.comboBorderStyle);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(6, 247);
+            this.groupBox1.Location = new System.Drawing.Point(6, 230);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(333, 101);
             this.groupBox1.TabIndex = 4;
@@ -229,9 +229,9 @@
             // 
             this.buttonAccept.Image = global::WindowManager.Properties.Resources.accept;
             this.buttonAccept.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAccept.Location = new System.Drawing.Point(9, 74);
+            this.buttonAccept.Location = new System.Drawing.Point(9, 72);
             this.buttonAccept.Name = "buttonAccept";
-            this.buttonAccept.Size = new System.Drawing.Size(52, 21);
+            this.buttonAccept.Size = new System.Drawing.Size(61, 23);
             this.buttonAccept.TabIndex = 4;
             this.buttonAccept.Text = "Set";
             this.buttonAccept.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -242,9 +242,9 @@
             // 
             this.buttonRefresh.Image = global::WindowManager.Properties.Resources.arrow_refresh;
             this.buttonRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonRefresh.Location = new System.Drawing.Point(67, 74);
+            this.buttonRefresh.Location = new System.Drawing.Point(99, 72);
             this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(75, 21);
+            this.buttonRefresh.Size = new System.Drawing.Size(75, 23);
             this.buttonRefresh.TabIndex = 3;
             this.buttonRefresh.Text = "Refresh";
             this.buttonRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -289,7 +289,7 @@
             this.groupPreview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupPreview.Location = new System.Drawing.Point(0, 0);
             this.groupPreview.Name = "groupPreview";
-            this.groupPreview.Size = new System.Drawing.Size(132, 235);
+            this.groupPreview.Size = new System.Drawing.Size(132, 218);
             this.groupPreview.TabIndex = 5;
             this.groupPreview.TabStop = false;
             this.groupPreview.Text = "Preview";
@@ -300,7 +300,7 @@
             this.preview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.preview.Location = new System.Drawing.Point(3, 16);
             this.preview.Name = "preview";
-            this.preview.Size = new System.Drawing.Size(126, 216);
+            this.preview.Size = new System.Drawing.Size(126, 199);
             this.preview.TabIndex = 2;
             this.preview.TabStop = false;
             // 
@@ -319,7 +319,7 @@
             // container.Panel2
             // 
             this.container.Panel2.Controls.Add(this.groupPreview);
-            this.container.Size = new System.Drawing.Size(329, 235);
+            this.container.Size = new System.Drawing.Size(329, 218);
             this.container.SplitterDistance = 193;
             this.container.TabIndex = 6;
             this.container.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.container_SplitterMoved);
@@ -332,7 +332,7 @@
             this.tabControl.Location = new System.Drawing.Point(0, 24);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(353, 382);
+            this.tabControl.Size = new System.Drawing.Size(353, 365);
             this.tabControl.TabIndex = 7;
             this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
             // 
@@ -343,7 +343,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(345, 356);
+            this.tabPage1.Size = new System.Drawing.Size(345, 339);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Current Processes";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -357,7 +357,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(345, 356);
+            this.tabPage2.Size = new System.Drawing.Size(345, 339);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Program Profiles";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -373,7 +373,7 @@
             this.groupBox2.Controls.Add(this.comboProgStyle);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(6, 247);
+            this.groupBox2.Location = new System.Drawing.Point(6, 230);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(333, 101);
             this.groupBox2.TabIndex = 14;
@@ -412,9 +412,9 @@
             // 
             this.btnProgSet.Image = global::WindowManager.Properties.Resources.accept;
             this.btnProgSet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProgSet.Location = new System.Drawing.Point(9, 74);
+            this.btnProgSet.Location = new System.Drawing.Point(9, 72);
             this.btnProgSet.Name = "btnProgSet";
-            this.btnProgSet.Size = new System.Drawing.Size(61, 21);
+            this.btnProgSet.Size = new System.Drawing.Size(61, 23);
             this.btnProgSet.TabIndex = 4;
             this.btnProgSet.Text = "Save";
             this.btnProgSet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -425,9 +425,9 @@
             // 
             this.btnProgReset.Image = global::WindowManager.Properties.Resources.exclamation;
             this.btnProgReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProgReset.Location = new System.Drawing.Point(76, 74);
+            this.btnProgReset.Location = new System.Drawing.Point(99, 72);
             this.btnProgReset.Name = "btnProgReset";
-            this.btnProgReset.Size = new System.Drawing.Size(61, 21);
+            this.btnProgReset.Size = new System.Drawing.Size(75, 23);
             this.btnProgReset.TabIndex = 3;
             this.btnProgReset.Text = "Reset";
             this.btnProgReset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -471,7 +471,7 @@
             // remSelected
             // 
             this.remSelected.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.remSelected.Location = new System.Drawing.Point(69, 217);
+            this.remSelected.Location = new System.Drawing.Point(69, 200);
             this.remSelected.Name = "remSelected";
             this.remSelected.Size = new System.Drawing.Size(101, 24);
             this.remSelected.TabIndex = 2;
@@ -482,7 +482,7 @@
             // btnAddProgram
             // 
             this.btnAddProgram.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAddProgram.Location = new System.Drawing.Point(8, 217);
+            this.btnAddProgram.Location = new System.Drawing.Point(8, 200);
             this.btnAddProgram.Name = "btnAddProgram";
             this.btnAddProgram.Size = new System.Drawing.Size(55, 24);
             this.btnAddProgram.TabIndex = 1;
@@ -506,7 +506,7 @@
             this.listPrograms.Location = new System.Drawing.Point(8, 6);
             this.listPrograms.MultiSelect = false;
             this.listPrograms.Name = "listPrograms";
-            this.listPrograms.Size = new System.Drawing.Size(329, 205);
+            this.listPrograms.Size = new System.Drawing.Size(329, 188);
             this.listPrograms.TabIndex = 0;
             this.listPrograms.UseCompatibleStateImageBehavior = false;
             this.listPrograms.View = System.Windows.Forms.View.Details;
@@ -536,7 +536,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(353, 406);
+            this.ClientSize = new System.Drawing.Size(353, 389);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
