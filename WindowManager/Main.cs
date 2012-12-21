@@ -40,6 +40,9 @@ namespace WindowManager
                 }
             }
 
+            checkMinToTray.Checked = Properties.Settings.Default.MinToTray;
+            checkBalloonStart.Checked = Properties.Settings.Default.BalloontipStart;
+
             //Create the delegates to some winapi funcs
             EnumCallback = new User32.EnumWindowsCallback(EnumWindows);
 
@@ -231,6 +234,17 @@ namespace WindowManager
         private void ManagerMain_Resize(object sender, EventArgs e)
         {
             UpdateThumb(); //Update the thumbnail
+
+            if (FormWindowState.Minimized == this.WindowState)
+            {
+                this.Hide();
+                WindowState = FormWindowState.Minimized;
+                trayIcon.Visible = true;
+            }
+            else if (FormWindowState.Normal == this.WindowState)
+            {
+                trayIcon.Visible = false;
+            }
         }
 
         private void container_SplitterMoved(object sender, SplitterEventArgs e)
@@ -494,6 +508,12 @@ namespace WindowManager
                     if ( (p.MainModule.FileName.ToLower() == set.Filepath.ToLower()) && (set.Enabled))
                     {
                         ModifyProperties(set, Handle);
+                        
+                        //Show a balloon tip if we're set to
+                        if (checkBalloonStart.Checked)
+                        {
+                            trayIcon.ShowBalloonTip(3000, "Program Profile Applied", "Window Manager has applied a profile to " + p.MainModule.ModuleName, ToolTipIcon.Info);
+                        }
                     }
                 }
             }
@@ -621,5 +641,45 @@ namespace WindowManager
                 comboProgStyle.Enabled = false;
             }
         }
+
+        private void checkMinToTray_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.MinToTray = checkMinToTray.Checked;
+            Properties.Settings.Default.Save();
+        }
+
+        private void trayClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void checkBalloonStart_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.BalloontipStart = checkBalloonStart.Checked;
+            Properties.Settings.Default.Save();
+        }
+
+        private void trayRestore_Click(object sender, EventArgs e)
+        {
+            this.Show();
+            WindowState = FormWindowState.Normal;
+            this.BringToFront();
+        }
+
+        private void trayIcon_DoubleClick(object sender, EventArgs e)
+        {
+            this.Show();
+            WindowState = FormWindowState.Normal;
+            this.BringToFront();
+        }
+
+        private void traySettings_Click(object sender, EventArgs e)
+        {
+            this.Show();
+            WindowState = FormWindowState.Normal;
+            this.BringToFront();
+            this.tabControl.SelectedTab = tabPage2;
+        }
+
     }
 }

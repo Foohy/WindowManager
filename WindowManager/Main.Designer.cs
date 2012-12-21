@@ -75,6 +75,15 @@
             this.Directory = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Options = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.openExec = new System.Windows.Forms.OpenFileDialog();
+            this.checkMinToTray = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.traySettings = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayRestore = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.trayClose = new System.Windows.Forms.ToolStripMenuItem();
+            this.trayMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.checkBalloonStart = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupPreview.SuspendLayout();
@@ -86,6 +95,7 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.trayMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // listWindows
@@ -145,14 +155,19 @@
             // 
             this.quitToolStripMenuItem.Image = global::WindowManager.Properties.Resources.door_open;
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(97, 22);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
             // 
+            this.viewToolStripMenuItem.Checked = true;
+            this.viewToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.refreshNowToolStripMenuItem});
+            this.refreshNowToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.checkMinToTray,
+            this.checkBalloonStart});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.viewToolStripMenuItem.Text = "View";
@@ -161,8 +176,8 @@
             // 
             this.refreshNowToolStripMenuItem.Image = global::WindowManager.Properties.Resources.arrow_refresh;
             this.refreshNowToolStripMenuItem.Name = "refreshNowToolStripMenuItem";
-            this.refreshNowToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
-            this.refreshNowToolStripMenuItem.Text = "Refresh Now";
+            this.refreshNowToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.refreshNowToolStripMenuItem.Text = "Refresh";
             this.refreshNowToolStripMenuItem.Click += new System.EventHandler(this.refreshNowToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
@@ -532,6 +547,76 @@
             // 
             this.openExec.Filter = "Executable|*.exe";
             // 
+            // checkMinToTray
+            // 
+            this.checkMinToTray.Checked = true;
+            this.checkMinToTray.CheckOnClick = true;
+            this.checkMinToTray.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkMinToTray.Name = "checkMinToTray";
+            this.checkMinToTray.Size = new System.Drawing.Size(200, 22);
+            this.checkMinToTray.Text = "Minimize to system tray";
+            this.checkMinToTray.Click += new System.EventHandler(this.checkMinToTray_Click);
+            // 
+            // trayIcon
+            // 
+            this.trayIcon.ContextMenuStrip = this.trayMenu;
+            this.trayIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("trayIcon.Icon")));
+            this.trayIcon.Text = "Window Manager";
+            this.trayIcon.Visible = true;
+            this.trayIcon.DoubleClick += new System.EventHandler(this.trayIcon_DoubleClick);
+            // 
+            // traySettings
+            // 
+            this.traySettings.Name = "traySettings";
+            this.traySettings.Size = new System.Drawing.Size(152, 22);
+            this.traySettings.Text = "Settings";
+            this.traySettings.Click += new System.EventHandler(this.traySettings_Click);
+            // 
+            // trayRestore
+            // 
+            this.trayRestore.Name = "trayRestore";
+            this.trayRestore.Size = new System.Drawing.Size(152, 22);
+            this.trayRestore.Text = "Restore";
+            this.trayRestore.Click += new System.EventHandler(this.trayRestore_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(113, 6);
+            // 
+            // trayClose
+            // 
+            this.trayClose.Name = "trayClose";
+            this.trayClose.Size = new System.Drawing.Size(116, 22);
+            this.trayClose.Text = "Close";
+            this.trayClose.Click += new System.EventHandler(this.trayClose_Click);
+            // 
+            // trayMenu
+            // 
+            this.trayMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.traySettings,
+            this.trayRestore,
+            this.toolStripSeparator1,
+            this.trayClose});
+            this.trayMenu.Name = "trayMenu";
+            this.trayMenu.Size = new System.Drawing.Size(117, 76);
+            this.trayMenu.Text = "Window Manager";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(197, 6);
+            // 
+            // checkBalloonStart
+            // 
+            this.checkBalloonStart.Checked = true;
+            this.checkBalloonStart.CheckOnClick = true;
+            this.checkBalloonStart.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBalloonStart.Name = "checkBalloonStart";
+            this.checkBalloonStart.Size = new System.Drawing.Size(200, 22);
+            this.checkBalloonStart.Text = "Balloon tip on start";
+            this.checkBalloonStart.Click += new System.EventHandler(this.checkBalloonStart_Click);
+            // 
             // ManagerMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -558,6 +643,7 @@
             this.tabPage2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.trayMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -604,6 +690,15 @@
         private System.Windows.Forms.ColumnHeader Options;
         private System.Windows.Forms.ColumnHeader Directory;
         private System.Windows.Forms.OpenFileDialog openExec;
+        private System.Windows.Forms.ToolStripMenuItem checkMinToTray;
+        private System.Windows.Forms.NotifyIcon trayIcon;
+        private System.Windows.Forms.ToolStripMenuItem traySettings;
+        private System.Windows.Forms.ToolStripMenuItem trayRestore;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem trayClose;
+        private System.Windows.Forms.ContextMenuStrip trayMenu;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem checkBalloonStart;
     }
 }
 
