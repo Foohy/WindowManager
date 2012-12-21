@@ -25,6 +25,7 @@ namespace WindowManager.Properties {
 
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SettingsSerializeAs(global::System.Configuration.SettingsSerializeAs.Binary)]
         public global::System.Collections.Generic.List<WindowManager.ProgramSettings> Programs
         {
             get
